@@ -16,12 +16,10 @@ class OrganicDict(dict):
         
         Update a path or group of paths.
         If item is a `dict` instance, merge the calling object with item,
-        comparing all keys in same depth, creating all missed item keys on object,
-        and updating conflicting keys.
-        If item is a sequence, consider thats represent the path to be updated,
-        creating any missing key in the proccess, and putting the last element
-        as value of path.
-        In any case, conflicting keys will be updated, receiving item value"""
+        comparing all keys in same depth.
+        If item is a sequence, consider thats represent the path to be updated.
+        In any case, conflicting keys will be updated, receiving item value, 
+        and item keys missing on obejct will be created"""
         
         assert isinstance(item, (dict, tuple, list)), "item needs to be `dict`, `list` or `tuple` instance"
         if not isinstance(item, dict):
