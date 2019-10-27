@@ -65,4 +65,5 @@ class OrganicDict(dict):
     
     @classmethod
     def _tuple_to_dict(cls, t):
+        if not t: return None
         return t[0] if len(t) < 2 else {t[0]: cls._tuple_to_dict(t[1:])}
