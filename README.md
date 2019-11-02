@@ -8,17 +8,14 @@ But is commom a situation where the result `dict` has 4 or more levels of depth 
 
 ## How to use
 
-###Instanciation
+- Instanciation
 
 ````py
 >>> obj = OrganicDict() # empty instance
-
 >>> d = {'a': 1, 'b': 2}
 >>> obj = OrganicDict(d) # Transform a dict in a OrganicDict
-
 >>> l = [('a', 1), ('b', 2)]
 >>> obj = OrganicDict(l) # Same as OrganicDict(dict(l))
-
 >>> t = [
 ...    ('a', 'b', 'c'),
 ...    ('d', 'e', 'f')
